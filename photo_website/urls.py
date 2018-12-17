@@ -16,8 +16,7 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-urlpatterns = patterns(
+urlpatterns = [
    	'',
-
-	 url(r'', include('hello.urls')),
-)
+#    url(r'', include('hello.urls')),
+]

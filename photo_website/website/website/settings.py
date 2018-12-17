@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello'
+    'hello.apps.HelloConfig',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +127,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'hello/static')
+
+#allows Django to identify as being the url we want to define after log in
+LOGIN_REDIRECT_URL = '/hello/hub'

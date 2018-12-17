@@ -1,25 +1,17 @@
-    <!DOCTYPE html>
-    <html>
-	<head>
-	    <meta charset="utf-8">
-	    <title>Login</title>
-        <style>
-
-        </style>
-            {% load static %}
-        <link rel="stylesheet" href="{% static "hello/file.css" %}" type="text/css">
+{% extends 'base.html' %}
 
 
-        {% load static %}
-        <img src="{% static "hello/flat,550x550,075,f.u3.jpg" %}" alt="My image">
-	</head>
-
-	<body>
+{% block body %}
+    <div class="container">
+        <h1>Greetings Traveler</h1>
         <p>
-            {% load static %}
-        <link rel="stylesheet" href="{% static "hello/font.css" %}" type="text/css">
-        Welcome to Space Castronaut
+            Provide the password
         </p>
-
-	</body>
-    </html>
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+{% endblock %}
