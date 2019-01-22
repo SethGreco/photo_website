@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls import url
+from website import views
 
 urlpatterns = [
 
+    path('', views.login_redirect, name='login_redirect'),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-   # url(r'^hello/', include('hello.urls')),
     path('hello/', include('hello.urls')),
 ]

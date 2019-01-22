@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Django default" uuid="6fc0c959-3bc9-47ee-8c41-0e24c6ed366c">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
-      <auth-required>false</auth-required>
+    <data-source name="web_data@192.168.0.12" uuid="6a52d00f-49a4-4952-b0b6-f07efb1adb6e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="MYSQL" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
       <first-sync>true</first-sync>
+      <user-name>test</user-name>
+      <ssh-properties>
+        <enabled>false</enabled>
+        <proxy-host>192.168.1.162</proxy-host>
+        <proxy-port>8000</proxy-port>
+        <user>seth</user>
+        <use-password>true</use-password>
+        <auth-type>PASSWORD</auth-type>
+      </ssh-properties>
     </data-source>
   </component>
 </project>
