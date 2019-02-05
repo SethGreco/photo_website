@@ -2,6 +2,10 @@ import textwrap
 from django.views.generic.base import View
 from django.shortcuts import render, redirect
 from hello.forms import RegistrationForm
+from rest_framework import generics
+from .models import Songs, ImageModel
+from .serializers import SongsSerializer
+from django.http import HttpResponse, HttpResponseForbidden
 
 
 # Create your views here.
@@ -34,3 +38,13 @@ def register(request):
 
     args = {'form': form}
     return render(request, 'hello/reg_form.html', args)
+
+
+class ListSongsView(generics.ListAPIView):
+    """
+    Provides a get method handler.
+    """
+    queryset = Songs.objects.all()
+    serializer_class = SongsSerializer
+
+
